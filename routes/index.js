@@ -1,11 +1,12 @@
-// api prefixed routes will come from here
 const router = require('express').Router();
-
-// import api endpoints from api directory
+// Import all of the API routes from /api/index.js (no need for index.js though since it's implied)
 const apiRoutes = require('./api');
 
-// add 'api' prefix to all api endpoints
+// add prefix of `/api` to all of the api routes imported from the `api` directory
 router.use('/api', apiRoutes);
 
-module.exports = router;
+router.use((req, res) => {
+  res.status(404).send('<h1> 404 Error!</h1>');
+});
 
+module.exports = router;
