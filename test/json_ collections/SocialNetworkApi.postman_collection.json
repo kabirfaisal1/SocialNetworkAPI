@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "a003aadc-7fca-41e2-83bb-2666a767c39c",
+		"name": "SocialNetworkApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23745253"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "friends",
+					"item": [
+						{
+							"name": "add_friend",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": "http://localhost:3001/api/users/{userID}/friends/{friendID}"
+							},
+							"response": []
+						},
+						{
+							"name": "remove_friend",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/users/{userID}/friends/{friendID}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create_user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"{?}\",\n    \"email\": \"{?}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/users/{userID}"
+					},
+					"response": []
+				},
+				{
+					"name": "update_user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"test2world@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/users/{userId}"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3001/api/users/{userID}"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "thoughts",
+			"item": [
+				{
+					"name": "reactions",
+					"item": [
+						{
+							"name": "add_reaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"reactionBody\":\"for sure\",\n\"username\":\"tester5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3001/api/thoughts/{thoughtsID}/reactions"
+							},
+							"response": []
+						},
+						{
+							"name": "delete_reaction",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3001/api/thoughts/{thoughtsID}/reactions/reactionID"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create_thought",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"thoughtText\": \"lets do get all thought\",\n\"username\": \"{userName}\",\n\"userId\": \"{userID}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/thoughts"
+					},
+					"response": []
+				},
+				{
+					"name": "get_All_Thought",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/thoughts"
+					},
+					"response": []
+				},
+				{
+					"name": "get_thought_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/thoughts/{thoughtsId}"
+					},
+					"response": []
+				},
+				{
+					"name": "update_thought",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\t\n\t\"thoughtText\": \"let do something fun\"\n\t\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/thoughts/{thoughtsID}/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_thought",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3001/api/thoughts/{thoughtsID}"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
