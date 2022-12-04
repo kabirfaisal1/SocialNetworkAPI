@@ -1,17 +1,14 @@
 {
-  "name": "24-Stu_Subdoc-Population",
-  "version": "1.0.1",
-  "description": "Student activity for populating subdocs",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "Social-Network-API",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "start": "node index",
-    "dev": "nodemon index",
-    "seed": "node utils/seed.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^6.0.13"
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.9"
